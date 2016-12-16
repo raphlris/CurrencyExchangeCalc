@@ -10,6 +10,7 @@ class Currencyexchange < FXMainWindow
 	def initialize(app)
 		super(app, "Currency Exchange", :width=>350)
 		
+#to update the currency name to traditional chinese
 		currencylist=FXPopup.new(self)
 		[' ', '歐元(EUR)','美元(USD)','加元(CAD)','人民幣(CNY)','日圓(JPY)','韓圜(KRW)','坡紙(SGD)', '英鎊(GBP)',
 		'澳元(AUD)','瑞郎(CHF)','港元(HKD)','泰銖(THB)','紐元(NZD)','台幣(TWD)'].each do |c|
@@ -76,11 +77,7 @@ class Currencyexchange < FXMainWindow
 				end
 			end
 		end
-=begin
-		closebutton.connect(SEL_COMMAND) do
-			FXMainWindow.connect(SEL_CLOSE)
-		end
-=end
+
 	end
 	
 	def rate(fromC, toC)
